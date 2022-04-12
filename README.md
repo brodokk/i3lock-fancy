@@ -1,5 +1,5 @@
-i3lock-fancy
-============
+i3lock-fancy-ffmpeg-multimonitor
+================================
 
 This is an i3lock bash script that takes a screenshot of the desktop, blurs the background and adds a lock icon and text
 
@@ -24,29 +24,27 @@ Optional Dependencies
 Installation
 ------------
 
-To install i3lock-fancy manually, git clone the repository:
+To install i3lock-fancy-ffmpeg-multimonitor manually, git clone the repository:
 
-    git clone https://github.com/meskarune/i3lock-fancy.git
+    git clone https://github.com/brodokk/i3lock-fancy.git
 
 Then change to the directory and run make.
 
-    cd i3lock-fancy
+    cd i3lock-fancy-ffmpeg-multimonitor
     sudo make install
 
-**IMPORTANT NOTE: the way to install i3lock-fancy has changed! If you are a
+**IMPORTANT NOTE: the way to install i3lock-fancy-ffmpeg-multimonitor has changed! If you are a
   package maintainer or previously installed manually you may have to review
   and update your configurations. The new change simplifies a lot of
   things so updates will be easier in the future.**
 
 ### The following distro's have packages you can use to install:
-* Arch Linux: https://aur.archlinux.org/packages/i3lock-fancy-git/
-* GNU Guix: Run `guix package --install i3lock-fancy`
-* Debian: https://packages.debian.org/sid/i3lock-fancy
+* Arch Linux: https://aur.archlinux.org/packages/i3lock-fancy-ffmpeg-multimonitor-git/
 
 Usage
 -----
 
-    i3lock-fancy [options]
+    i3lock-fancy-ffmpeg-multimonitor [options]
     
     Options:
         -h, --help       This help menu.
@@ -72,14 +70,14 @@ Usage
                          or 'maim' will increase script speed and allow setting
                          custom flags like haing a delay.
 
-example: ```i3lock-fancy -gpf Comic-Sans-MS -- scrot -z```
+example: ```i3lock-fancy-ffmpeg-multimonitor -gpf Comic-Sans-MS -- scrot -z```
 
 Extras
 ------
 
 The lock screen in action:
 
-![lockscreen animation](https://raw.githubusercontent.com/meskarune/i3lock-fancy/master/action.gif)
+![lockscreen animation](https://raw.githubusercontent.com/meskarune/i3lock-fancy-ffmpeg-multimonitor/master/action.gif)
 
 To use this script you can set a hotkey in your window manager to run the lock command,
 set xautolock to run at boot, or use a systemd script to either lock on suspend or run xautolock.
@@ -96,7 +94,7 @@ Systemd Unit file example (edit for your own use):
     Type=simple
     User=meskarune
     Environment=DISPLAY=:0
-    ExecStart=/usr/bin/xautolock -time 5 -locker /usr/bin/i3lock-fancy -detectsleep
+    ExecStart=/usr/bin/xautolock -time 5 -locker /usr/bin/i3lock-fancy-ffmpeg-multimonitor -detectsleep
     
     [Install]
     WantedBy=graphical.target
@@ -113,7 +111,7 @@ right. The script is usable now, but it's under developement and things may chan
 Static image
 ------------
 If you would like to run `i3lock-color` with a static image in the style of
-i3lock-fancy, run `convert` from image magick directly on the background image
+i3lock-fancy-ffmpeg-multimonitor, run `convert` from image magick directly on the background image
 you want to use. Then specify the result `newimage.png` to `i3lock -i`:
 ```
 #!/bin/sh

@@ -3,7 +3,7 @@
 # Dependencies: ffmpeg, i3lock-color-git, xorg-xrandr, wmctrl (optional)
 set -o errexit -o noclobber -o nounset -o pipefail
 
-lock_file="/usr/share/i3lock-fancy/icons/lock.png"
+lock_file="/usr/share/i3lock-fancy-ffmpeg-multimonitor/icons/lock.png"
 image_file=$(mktemp -u --suffix=.png)
 trap "rm -f $image_file" EXIT
 font_file=$(fc-match sans-serif --format=%{file})
